@@ -1,16 +1,13 @@
 import express from "express";
 import cors from "cors";
 
+import healthRoutes from "./routes/health.routes";
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.get("/api/health", (_req, res) => {
- res.json({
-  status: "ok",
-  message: "Portfolio API is running and connected",
- });
-});
+app.use("/api/health", healthRoutes);
 
 export default app;
