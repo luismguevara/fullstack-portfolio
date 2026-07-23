@@ -9,7 +9,7 @@ app.use(express.json());
 app.get("/api/health", (_req, res) => {
  res.json({
   status: "ok",
-  message: "Portfolio API is running",
+  message: "Portfolio API is running fine",
  });
 });
 
